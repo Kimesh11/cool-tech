@@ -1,0 +1,54 @@
+body {
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+  }
+  
+  /* Floating stars */
+  .cosmic-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* Creates multiple glowing dots */
+  .cosmic-stars span {
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: floatStar 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Star animation */
+  @keyframes floatStar {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-1000px) scale(0.3); opacity: 0.2; }
+  }
+  
+  /* Center card container */
+  .auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .auth-card {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+  }
+  
